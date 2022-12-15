@@ -92,13 +92,8 @@ int randomn(int seed, int x) {
 }
 
 void clear_screen(void) {
-	int i;
-
-	for (i = 0; i < 23; i++) {	
-	// don't clear 24th line so the terminal doesn't scroll
-		printf("\033[%d;1H                                                                                          ", (i + 1));
-	}
-	fflush(stdout);
+    printf("\033[2J");
+    fflush(stdout);
 }
 
 void draw_text(const char *str, struct vec2 *pos, int max_height, int max_width) {
@@ -424,6 +419,7 @@ int main(int argc, char *argv[]) {
 	}
 
 	for (i = 0; i < loops; i++) {
+		clear_screen();
 		num = randomn(lines[((lines[MY_OP][randomn(((unsigned int) clock()), line_count)][0]) & 1)][randomn(((unsigned int) clock()), line_count)][0], 3);
 		// let last byte of first char of MY_OP decide if randomn uses lines[0] or [1] to return the char value 
 		// I'm just replacing i with another randomn() because i is no longer <= line_count
@@ -454,7 +450,6 @@ int main(int argc, char *argv[]) {
 
 		draw_bellcurve(&bellcurve_pos, (randomn(((unsigned long int) clock()), 213) + 17), BELLCURVE_DRAW_DELAY_MS);
 
-		clear_screen();
 	}
 
 	free_read_data(lines, line_count);
