@@ -28,3 +28,8 @@ $ bellcurve filepath loops
 - no segfaults (afaik, tested with valgrind) 
 - no weird header files you need to link (like math.h). Compilation is simple.
 - cross-platform? (haven't tested it)
+
+## Files:
+- old_main.c - the OG file where it all began - ignore
+- main.c - this is the file with the code you need to compile
+- opinions.txt - a short example input file that needs to be passed to the program together with the number of loops
