@@ -10,7 +10,7 @@ $(BIN): $(OBJDIR)/main.o
 	$(CC) $(CFLAGS) $^ -o $@
 
 # Object files
-$(OBJDIR)/%.o: $(SRCDIR)/$.c
+$(OBJDIR)/%.o: $(SRCDIR)/%.c
 	$(CC) $(CFLAGS) -c $< -o $@
 
 # Cleaning
