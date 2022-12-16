@@ -3,6 +3,8 @@
 I had to make an account because people don't appreciate  
 the subtle genius of using reddit comments as a respository.
 
+# [DOWNLOAD](https://github.com/iloveclang/bellcurve/releases/tag/banana)
+
 ## About
 
 bellcurve is a small meme program made with the standard C library.  
